@@ -8,7 +8,8 @@
     "test": "jest",
     "dev": "nodemon app.js",
     "client": "cd ../client && npm start",
-    "start": "concurrently \"npm run dev\" \"npm run client\""
+    "start": "node server/app.js",
+    "build": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
