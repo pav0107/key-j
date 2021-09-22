@@ -31,24 +31,29 @@ export const AlbumTracks = () => {
   return (
     <div>
       <div className="breaker"></div>
-      <h1>
+      <h2>
         <img
           src={'https://i.scdn.co/image/' + params.albumUrl}
           style={{ height: 200 }}
         />
         {params.albumName}
-      </h1>
+      </h2>
       {state.length > 0 &&
         state.map((e) => (
-          <div className='song-container song-album-container' key={uuidv4()}>
-          <div className='song-section'>
-            <a href= {'/track/' + e.id + '/' + params.albumUrl + '/' + e.name} key={uuidv4()}>
-            <div className='song-div'>
-              <h2>{e.track_number}.  {e.name}</h2>
+          <div className="song-container song-album-container" key={uuidv4()}>
+            <div className="song-section">
+              <a
+                href={'/track/' + e.id + '/' + params.albumUrl + '/' + e.name}
+                key={uuidv4()}
+              >
+                <div className="song-div">
+                  <h2>
+                    {e.track_number}. {e.name}
+                  </h2>
+                </div>
+              </a>
             </div>
-            </a>
           </div>
-         </div>
         ))}
     </div>
   );

@@ -78,6 +78,23 @@ h1 {
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+h2 {
+  background-color: #004d7a;
+  color: aliceblue;
+  letter-spacing: 10px;
+  font-family: 'Hind', sans-serif;
+  outline: white;
+  font-size: 2rem;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+h2 img {
+  padding: 10px;
+}
+
 /* --------  SEARCH BAR STYLING  -------- */
 
 form {
@@ -149,7 +166,7 @@ input {
   justify-content: flex-start;
   align-items: center;
   margin: 1rem;
-  height: 15vw;
+  min-height: 450px;
   padding: 2rem;
   border-radius: 10px;
   color: rgb(221, 221, 221);
@@ -231,7 +248,9 @@ input {
   color: honeydew;
 }
 
-a:link { text-decoration: none; }
+a:link {
+  text-decoration: none;
+}
 
 .song-artist:hover {
   position: relative;
@@ -378,5 +397,10 @@ a:link { text-decoration: none; }
     justify-content: center;
     align-items: center;
     min-height: 60vh;
+  }
+
+  h2 {
+    width: 200px;
+    align-items: center;
   }
 }
