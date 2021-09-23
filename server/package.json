@@ -9,7 +9,7 @@
     "dev": "nodemon app.js",
     "production": "node app.js",
     "client": "cd ../client && npm start",
-    "start": "concurrently \"npm start\" \"npm run client\""
+    "start": "concurrently \"npm run app.js\" \"npm run build\""
   },
   "author": "",
   "license": "ISC",
