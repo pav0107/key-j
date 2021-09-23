@@ -1,0 +1,22 @@
+{
+  "name": "key-j",
+  "version": "1.0.0",
+  "description": "Key-J is an app to help DJs, musicians and music enthusiasts access a song's key information, such as danceability, energy, mood, tempo, time signature and, of course, key.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd backend && npm install",
+    "start": "cd backend && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pav0107/key-j.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pav0107/key-j/issues"
+  },
+  "homepage": "https://github.com/pav0107/key-j#readme"
+}
