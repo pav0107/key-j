@@ -7,8 +7,9 @@
     "pretest": "eslint --ignore-path .gitignore .",
     "test": "jest",
     "dev": "nodemon app.js",
+    "production": "node app.js",
     "client": "cd ../client && npm start",
-    "start": "concurrently \"npm run dev\" \"npm run client\""
+    "start": "concurrently \"npm run production\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
