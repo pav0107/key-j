@@ -9,7 +9,7 @@
     "dev": "nodemon app.js",
     "production": "node app.js",
     "client": "cd ../client && npm start",
-    "start": "node app.js",
+    "start": "npm install && node app.js",
     "build": "cd client && npm install && npm run build"
   },
   "author": "",
