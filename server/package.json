@@ -10,7 +10,7 @@
     "production": "node app.js",
     "client": "cd ../client && npm start",
     "build": "cd ./build && npm start",
-    "start": "concurrently \"npm run node app.js\" \"npm run build\""
+    "start": "concurrently \"npm install\" \"npm run node app.js\" \"npm run build\""
   },
   "author": "",
   "license": "ISC",
