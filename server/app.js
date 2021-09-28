@@ -1,14 +1,15 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
 require('dotenv').config();
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join('build')));
 
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+app.get((req, res, next) => {
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 });
 
 app.use('/api/', require('./routes/root'));
