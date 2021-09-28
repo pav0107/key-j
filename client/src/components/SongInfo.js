@@ -38,64 +38,106 @@ const SongInfo = (props) => {
       });
   }, [props.songTitle]);
 
-
-  if(props.redirect) {
-  return (
-    <div>
-      {error && <div>{error}</div>}
-      {initialState.length > 0 &&
-        initialState.map((e) => (
-          <div className='home-song-container song-container' key={uuidv4()}>
-          <div className='song-image'>
-          <a href={['/album', e.album, e.albumId, e.albumUrl.split('/')[4]].join('/')} key={uuidv4()}>
-            <img src={e.albumUrl} style={{ height: 180 }}/>
-          </a>
-          <a href={'/artist/' + e.artistId + '/' + e.artist} key={uuidv4()}>
-          <div className='song-artist'>
-            <h2>{e.artist}</h2>
-          </div>
-          </a>
-          </div>
-          <div className='song-section'>
-            <a href={'/track/' + e.id + '/' + e.albumUrl.split('/')[4] + '/' + e.name} key={uuidv4()}>
-              <div className='song-div'>
-                <h2>{e.name}</h2>
+  if (props.redirect) {
+    return (
+      <div>
+        {error && <div>{error}</div>}
+        {initialState.length > 0 &&
+          initialState.map((e) => (
+            <div className="home-song-container song-container" key={uuidv4()}>
+              <div className="song-image">
+                <a
+                  href={[
+                    '/album',
+                    e.album,
+                    e.albumId,
+                    e.albumUrl.split('/')[4],
+                  ].join('/')}
+                  key={uuidv4()}
+                >
+                  <img src={e.albumUrl} style={{ height: 180 }} />
+                </a>
+                <a
+                  href={'/artist/' + e.artistId + '/' + e.artist}
+                  key={uuidv4()}
+                >
+                  <div className="song-artist">
+                    <h2>{e.artist}</h2>
+                  </div>
+                </a>
               </div>
-            </a>
-          </div>
-          </div>
+              <div className="song-section">
+                <a
+                  href={
+                    '/track/' +
+                    e.id +
+                    '/' +
+                    e.albumUrl.split('/')[4] +
+                    '/' +
+                    e.name
+                  }
+                  key={uuidv4()}
+                >
+                  <div className="song-div">
+                    <h2>{e.name}</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
           ))}
       </div>
     );
   } else {
     return (
-    <div>     
-    {error && <div>{error}</div>}
-    {initialState.length > 0 &&
-      initialState.map((e) => (
-        <div className='home-song-container song-container' key={uuidv4()}>
-        <div className='song-image'>
-        <a href={['/album', e.album, e.albumId, e.albumUrl.split('/')[4]].join('/')} key={uuidv4()}>
-          <img src={e.albumUrl} style={{ height: 180 }}/>
-        </a>
-        <a href={'/artist/' + e.artistId + '/' + e.artist} key={uuidv4()}>
-          <div className='song-artist'>
-            <h2>{e.artist}</h2>
-          </div>
-        </a>
-        </div>
-        <div className='song-section'>
-          <a href={['/compare', props.songAId, params.albumUrl, params.trackName, e.id, e.albumUrl.split('/')[4], e.name].join('/')} key={uuidv4()}>
-          <div className='song-div'>
-            <h2>{e.name}</h2>
-            <p>{e.artist}</p>
-          </div>
-          </a>
-        </div>
-        </div>
-      ))}
-    </div>
-    )
+      <div>
+        {error && <div>{error}</div>}
+        {initialState.length > 0 &&
+          initialState.map((e) => (
+            <div className="home-song-container song-container" key={uuidv4()}>
+              <div className="song-image">
+                <a
+                  href={[
+                    '/album',
+                    e.album,
+                    e.albumId,
+                    e.albumUrl.split('/')[4],
+                  ].join('/')}
+                  key={uuidv4()}
+                >
+                  <img src={e.albumUrl} style={{ height: 180 }} />
+                </a>
+                <div className="song-artist">
+                  <a
+                    href={'/artist/' + e.artistId + '/' + e.artist}
+                    key={uuidv4()}
+                  >
+                    <h2>{e.artist}</h2>
+                  </a>
+                </div>
+              </div>
+              <div className="song-section">
+                <a
+                  href={[
+                    '/compare',
+                    props.songAId,
+                    params.albumUrl,
+                    params.trackName,
+                    e.id,
+                    e.albumUrl.split('/')[4],
+                    e.name,
+                  ].join('/')}
+                  key={uuidv4()}
+                >
+                  <div className="song-div">
+                    <h2>{e.name}</h2>
+                    <p>{e.artist}</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          ))}
+      </div>
+    );
   }
 };
 
