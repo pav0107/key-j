@@ -6,9 +6,9 @@ require('dotenv').config();
 
 app.use(express.json());
 
-app.use('/api/', require('./routes/root'));
-
 app.use(express.static(path.join('build')));
+
+app.use('/api/', require('./routes/root'));
 
 app.get((req, res, next) => {
   res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
