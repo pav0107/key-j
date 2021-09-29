@@ -84,7 +84,7 @@ h2 {
   letter-spacing: 10px;
   font-family: 'Hind', sans-serif;
   outline: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 20px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -175,18 +175,12 @@ input {
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.home-song-container {
+.song-info {
+  width: 50%;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 1rem;
-  height: 12vw;
-  padding: 2rem;
-  margin-top: 3rem;
-  border-radius: 10px;
-  background-color: rgba(0, 77, 122, 0.7);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .album-song-container {
@@ -362,30 +356,18 @@ a:link {
   .logo {
     position: absolute;
   }
+
+  h2 {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-  .song-container {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 60vh;
-  }
   footer {
     display: none;
   }
-}
-
-@media screen and (max-width: 1050px) {
-  .song-container {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 60vh;
+  h2 {
+    font-size: 0.8rem;
   }
 }
 
