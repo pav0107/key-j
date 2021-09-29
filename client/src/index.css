@@ -197,6 +197,10 @@ input {
 }
 
 .song-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 7vh;
   min-width: 7vw;
   margin-right: 2rem;
