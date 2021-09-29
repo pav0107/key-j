@@ -31,8 +31,8 @@ npm install
 6. Add another .env folder in server/src/api
 7. In both of these add the following:
 ```
-CLIENT_ID = <em>YOUR CLIENT ID</em>
-CLIENT_SECRET = <em>YOUR CLIENT SECRET</em>
+CLIENT_ID = <YOUR CLIENT ID>
+CLIENT_SECRET = <YOUR CLIENT SECRET>
 PORT = 3001
 ```
 
